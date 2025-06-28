@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancito's page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    </head>
+
+<script> //Este código: -Espera a que el DOM cargue. -Busca el .encabezado (tu header fijo). -Calcula su altura real con offsetHeight. -Le aplica esa altura como margin-top al main (o el contenedor del contenido principal). //
+  window.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".encabezado");
+    const contenido = document.querySelector(".contenido-principal");
+
+    if (header && contenido) {
+      const headerHeight = header.offsetHeight;
+      contenido.style.marginTop = headerHeight + "px";
+    }
+  });
+</script>
+
+
+<body>
+  <header class="encabezado"> 
+
+      <a href="http://127.0.0.1:5500/index.html">
+        <img src="prints/mote2.png" alt="logo">
+      </a>
+      <div class="botones-derecha">
+       
+        <a href="portafolio/index.html" class="boton-contacto">
+          <img src="prints/portafolioname.png" alt="">
+        </a>
+
+        <a href="CV/index.html" class="boton-contacto">
+          <img src="prints/sobremi.png" alt="">
+        </a>
+        
+      </div>
+      
+  </header>
+
+<main class="contenido-principal"><!--esto envuelve todo lo q es el body y el footer-->
+    <script src="script.js"></script>
+    
+      <div class="hola"> <!--imagen principal de la pagina-->
+          <img src="prints/bienvenidoeste.png" alt="">
+      </div>
+
+      <div class="contenedor-centrado">
+
+        <div class="texto-inicio">
+
+          <div class="texto">
+              <h1>Yo soy inés</h1>
+              <p> Una persona creativa y curiosa, apasionada por el diseño en todas sus formas. Disfruto transformar ideas en proyectos que combinan lo visual, lo funcional y lo personal. Esta página refleja mi recorrido y las ganas que me mueven a seguir aprendiendo y creando. combinando lo técnico con lo artesanal. Siempre busco soluciones prácticas con un enfoque organizado y personal.</p>
+          </div>
+
+          <a href="https://mariainesdallia.link">
+          <img src="prints/YOESTE.png" alt="">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="contenedor-centrado2">
+        
+        <div class="texto-habilidades">
+
+            <div class="texto">
+
+                <h1>HABILIDADES BASICAS</h1>
+                <h5><i class="fa-solid fa-microchip"></i>Programacion en arduino y automatizacion</h5>
+                <h5><i class="fa-solid fa-file-lines"></i>Gestion documental y administrativa</h5>
+                <h5><i class="fa-solid fa-globe"></i> Diseño y Desarrollo web</h5>
+                <h5><i class="fa-solid fa-pen-nib"></i>Dibujo e ilustracion</h5>
+                <h5><i class="fa-solid fa-code"></i>Desarrollo de software y proyectos</h5>
+            </div>
+
+            <div class="texto"> 
+                <h5><i class="fa-solid fa-share-nodes"></i> Redes Sociales y programacion</h5>
+                <h5><i class="fa-solid fa-brain"></i>Pensamiento logico y resolucion de problemas</h5>
+                <h5><i class="fa-solid fa-people-group"></i>Trabajo en equipo y atencion al cliente</h5>
+                <h5><i class="fa-solid fa-book-open-reader"></i>Aprendizaje autodidacta y adaptabilidad</h5>
+                <div class="mote">
+                  <img src="prints/sleeping.png" alt="">
+                </div>
+            </div>
+          </div>
+
+      </div>
+
+
+</main>
+
+      <div class="contacto-hi">
+
+        <div class="hi">
+          <img src="prints/hi.png" alt="">
+        </div>
+
+        <div class="contacto">
+          <h2>¡Hablá conmigo!</h2>
+
+          <form action="https://formsubmit.co/pancito47208@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu mail" required>
+            <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+
+            <!-- Opcional: Evita spam -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Opcional: Redirige después de enviar -->
+            <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      
+    </div>
+  <footer class="footer-redes">
+     <a href="https://www.instagram.com/m.ines_dallia/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/maria-inés-dallia-575960361/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://tublog.wordpress.com" target="_blank"><i class="fab fa-wordpress"></i></a>
+      <a href="https://www.behance.net/mariainsdallia" target="_blank"><i class="fab fa-behance"></i></a>
+      <a href="https://github.com/pancito47" target="_blank"><i class="fab fa-github"></i></a> <!--target="_blank" hace que se abra en una pestaña nueva-->
+  </footer>
+
+
+</body>
+
+  
+
+ 
+</html>

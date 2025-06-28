@@ -1,0 +1,179 @@
+
+body{
+  background-image: url(trabajitus/paper\ texture.jpg);
+}
+
+.encabezado{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: #e5e6943a;
+  
+}
+.encabezado img{
+    width: 120px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.encabezado img:hover{
+   transform: scale(1.05); /* agranda un poquito */
+}
+
+.botones-derecha {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /*Esto empuja el bloque a la derecha */
+}
+.titulop{
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  padding-top: none;
+}
+.titulop img{
+  width: 100%;
+  padding-top: 1%;
+}
+
+.boton-contacto {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration:solid;
+  display: inline-block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.portafolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.tituloppd{
+  color: #ff6982;
+  background-color:#bcff9587;
+  border-radius: 30px;
+ display: flex;
+justify-content:left;
+margin: 5%;
+padding-left: 3%;
+padding-bottom: auto;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.trabajo {
+  
+  position: relative;
+  cursor: pointer;
+  width: 250px;
+  border: 2px solid #ccccccb9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 1.5s ease;
+
+}
+
+.trabajo:hover {
+  transform: scale(1.04); /*zoom de la imagen*/
+
+}
+
+.trabajo img {
+  width: 100%;
+  display: block;
+}
+
+.info-oculta {
+  display: none;
+  padding: 10px;
+  background-color: #ff68684d;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trabajo.mostrar .info-oculta {
+  display: block;
+}
+.portafolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.trabajo {
+  width: 350px;
+  border: 2px solid #ccccccb9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: rgba(255, 216, 89, 0.76);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+
+.trabajo img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Pestaña que se despliega */
+.info-oculta {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: #dddf68;
+  transition-duration:  10.4s ease;
+}
+
+/* Cuando se abre */
+.trabajo.mostrar .info-oculta {
+  max-height: 300px; /* Aumentá si necesitás más espacio */
+  padding: 10px;
+  
+}
+
+.t1{
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+  align-items:center;
+  justify-content: space-between;
+}
+.t2{
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+  align-items:center;
+  justify-content: space-between;
+}
+.t3{
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.footer-redes {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f288;
+}
+
+.footer-redes a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #ff69b4; /* color al q cambia al pasar el mouse */
+}

@@ -1,0 +1,406 @@
+
+body {
+  background-image: url('prints/paper\ texture.jpg');  
+  background-size: cover;/* Hace que la imagen cubra todo */
+  background-repeat: no-repeat;/* Evita que se repita */
+  background-position: center; /* La centra */
+  box-sizing: border-box;
+}
+
+.encabezado{
+  height: auto; /* Se ajusta al contenido */
+  min-height: auto;/* no sirve para nada pero no lo quiero borrar por miedo */
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 4px 10px;
+  background-color: #ffebb37a;
+  gap: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* para que quede por encima del resto */
+}
+.encabezado img{
+    width: 100px;
+   
+}
+
+.boton-contacto {
+  margin: 5px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration:none;
+  display: inline-block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.botones-derecha {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /*Esto empuja el bloque a la derecha */
+  padding-right: 3%;
+}
+
+.boton-contacto img{
+  width: 150px;
+}
+.boton-contacto {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-contacto:hover {
+  transform: scale(1.05); /* agranda un poquito */
+}
+
+/*contenedores de la pagina, info sobre mi y habilidades*/
+
+.contenedor-centrado {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.contenedor-centrado2{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.texto-habilidades{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-image: url(prints/paper\ texture.jpg);
+  border-radius: 20px;
+
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 660px;
+  width: 100%;
+}
+.texto-habilidades .texto h1{
+  padding-bottom: 15%;
+}
+.mote{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  margin-bottom: auto;
+}
+
+.texto-inicio {
+   font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #ffe69586;
+  border-radius: 20px;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%; /* se adapta */
+}
+.texto-inicio .texto{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.texto-inicio .texto p{
+   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@media (max-width: 600px) {
+  .texto-inicio {
+    flex-direction: column;
+    text-align: center;
+  }
+  .texto-inicio img {
+    width: 250px;
+  }
+}
+
+/*imagen de bienvenidos*/
+.hola img{
+  width: 100%;
+}
+.hola{
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease;
+}
+
+.hola.fade-out {
+  opacity: 0;
+  pointer-events: none; /* evita que moleste al hacer clic si querés */
+}
+.texto-inicio .texto {
+  display: flex;
+  flex-direction: column;/*Apila el texto verticalmente */
+}
+.texto-inicio h5 {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+}
+.texto-inicio img {
+  width: 230px;
+  border-radius: 12px;
+}
+
+.texto-inicio img,
+.caritas img,
+.hola img {
+  transition: transform 0.3s ease;
+}
+
+.texto-inicio img:hover,
+.hola img:hover {
+  transform: scale(1.05) rotate(1deg); /* agranda y rota leve */
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f6fff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: "Amatic SC", sans-serif;
+}
+
+.spinner {
+  border: 8px solid #c9ffc2;
+  border-top: 8px solid #5a7c45;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.texto h5{
+  background-color: #bcff9587;
+  border-radius: 20px;
+  padding: 5%;
+  display: flex;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+}
+
+.texto h5 i {
+  font-size: 18px;
+}
+
+.texto-inicio,
+.texto-habilidades {
+  animation: aparecer 1s ease-in;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* pie de pagina, contacto y cuadro de habla conmigo*/
+.contacto-hi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0; /* Sin espacio entre dibujo y cuadro */
+  margin: 60px auto;
+  width: fit-content;
+}
+
+.hi {
+  flex-shrink: 0; /* Evita que el dibujo se achique */
+}
+
+.hi img {
+  display: block;
+  height: 200px; /* Ajustá el tamaño como necesites */
+}
+
+.contacto {
+  background-color: #b6ec89; /* Color sólido */
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "Amatic SC", sans-serif;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* opcional */
+  text-align: center;
+}
+
+.contacto input,
+.contacto textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 2px solid #d3ffb6d2;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contacto button {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border: none;
+  background-color: #bcff95;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+  background-color: #9ce273;
+}
+
+/* Responsive: que se acomode en pantallas chicas */
+@media (max-width: 700px) {
+  .contacto-hi {
+    flex-direction: row;
+  }
+
+  .hi img {
+    height: 150px;
+    margin-bottom: -20px;
+  }
+}
+
+.footer-redes {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f281;
+}
+
+.footer-redes a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #ff69b4; /* color al q cambia al pasar el mouse */
+}
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Ocultamos checkbox */
+.menu-toggle {
+  display: none;
+}
+
+
+
+/* Responsive para celulares o pantallas pequeñas */
+
+@media (max-width: 768px) {
+  /* Estilos del encabezado para que los botones queden uno al lado del otro */
+  .botones-derecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre botones */
+  }
+
+  .botones-derecha a {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 8px;
+    
+  }
+  .botones-derecha img{
+    width: 90px;
+    padding: 4px;
+    margin-right: 10px;
+  }
+
+  /* Formulario y dibujo acomodados */
+  .formulario-con-dibujo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .formulario-con-dibujo img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .formulario-verde {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* Habilidades en columna */
+  .texto-habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  
+}
+
+

@@ -1,0 +1,227 @@
+
+.encabezado{
+  height: auto; /* Se ajusta al contenido */
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 4px 10px;
+  background-image: url(imge/papel6.jpg);
+   background-size: cover;/* Hace que la imagen cubra todo */
+  background-repeat: no-repeat;/* Evita que se repita */
+  background-position: center; /* La centra */
+  box-sizing: border-box;
+  gap: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* para que quede por encima del resto */
+}
+.encabezado img{
+    width: 100px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.encabezado img:hover{
+   transform: scale(1.05); /* agranda un poquito */
+}
+
+.botones-derecha {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /*Esto empuja el bloque a la derecha */
+  padding-right: 5%;
+}
+
+
+body {
+  background-image: url('imge/papel6.jpg');  
+  background-size: cover;/* Hace que la imagen cubra todo */
+  background-repeat: no-repeat;/* Evita que se repita */
+  background-position: center; /* La centra */
+  box-sizing: border-box;
+}
+
+
+.contenedor-centrado {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  
+}
+.contenedor-centrado{
+  border-radius: 12px;
+}
+
+.mifoto img{
+    width: 150px;
+    border-radius: 20px;
+}
+
+.primercuadro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between 10px;
+}
+.primercuadro{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-image: url(imge/papel\ marron\ chiquito.jpeg);
+  border-radius: 20px;
+
+  background-position: center; /* La centra */
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%; /* se adapta */
+}
+
+/* los cuadros de trayectoria y de trabajos*/
+
+
+/* Contenedor que envuelve los cuadros de escolaridad y trabajos */
+.contenedor-centrado2 {
+  display: flex;                /* Hace que los hijos estén uno al lado del otro */
+  justify-content: space-between; 
+  flex-wrap: wrap;              /* Permite que pasen abajo si no entra */
+  gap: 40px; /* espacio entre el texto y la imagen
+  padding: 100px 20px 0 20px;   /* Padding superior grande para que no quede pegado al header */
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+
+/* Cuadro de escolaridad y de trabajos */
+.escolaridad,
+.works {
+  width: 48%;                   /* Para que entren uno al lado del otro */
+  font-family: "Poppins", sans-serif;
+  background-image: url(imge/renglones\ chiquito.jpeg);
+  background-size: cover;
+  border-radius: 20px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Título principal de cada cuadro con ícono */
+.escolaridad h1,
+.works h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ítems individuales con título e ícono */
+.item h3 {
+  background-color: #bcff9587;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item h3 i {
+  color: #333;
+}
+
+/* Responsive: si el ancho de pantalla es menor, ponerlos uno debajo del otro */
+@media (max-width: 768px) {
+  .contenedor-centrado2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .escolaridad,
+  .works {
+    width: 90%;  /* Que ocupen casi todo el ancho del móvil */
+  }
+}
+
+/* Sección general */
+.idiomas {
+  padding: 60px 20px;              /* Espaciado interno arriba/abajo y a los lados */
+  background-color: #00000000;       /* Fondo blanco */
+  text-align: center;              /* Centra el texto */
+}
+
+/* Título con ícono (FontAwesome) */
+.idiomas h2 {
+   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.3em;                /* Tamaño de fuente grande */
+  color: #56bd66dc;                  /* Color verde */
+  display: flex;                   /* Flexbox para alinear ícono + texto */
+  align-items: center;            /* Alineación vertical centrada */
+  gap: 10px;                       /* Espacio entre ícono y texto */
+  justify-content: center;        /* Centrado horizontal */
+  margin-bottom: 40px;            /* Espacio inferior */
+}
+
+/* Contenedor de cada idioma */
+.idioma {
+  margin-bottom: 25px;            /* Espacio entre idiomas */
+  max-width: 500px;               /* Ancho máximo */
+  margin-left: auto;              /* Centrado horizontal (izquierda) */
+  margin-right: auto;             /* Centrado horizontal (derecha) */
+}
+
+/* Subtítulo de idioma */
+.idioma h3 {
+   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3em;               /* Tamaño del subtítulo */
+  margin-bottom: 10px;           /* Espacio inferior */
+  color: #f8c08c;                 /* Color violeta */
+}
+
+/* Contenedor de la barra de nivel */
+.barra-nivel {
+  width: 100%;                    /* Ocupa todo el ancho disponible */
+  height: 20px;                   /* Alto de la barra */
+  background-color: #ffd4ab70;         /* Color gris claro de fondo */
+  border-radius: 10px;            /* Bordes redondeados */
+  overflow: hidden;               /* Oculta lo que se desborde */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0); /* Sombra interior leve */
+}
+
+/* Barra interna que representa el nivel de idioma */
+.nivel {
+  height: 100%;                   /* Mismo alto que la barra exterior */
+  background-color: #4db65ddc;      /* Verde para representar el progreso */
+  transition: width 0.8s ease-in-out; /* Animación suave al cambiar el nivel */
+}
+
+
+.footer-redes {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2e7;
+}
+
+.footer-redes a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #4db65ddc; /* color al q cambia al pasar el mouse */
+}
